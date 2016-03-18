@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_cron',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -48,6 +50,10 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CRON_CLASSES = [
+    "autoreport.crons.UserMasterReport",
 ]
 
 ROOT_URLCONF = 'autoreport.urls'
@@ -84,7 +90,7 @@ DATABASES = {
         'NAME'      :'autoreport',
         'USER'      :'root',
         'PASSWORD'  :'123456',
-        'HOST'      :'127.0.0.1',
+        'HOST'      :'192.168.91.128',
         'PORT'      :'3306',
     } 
 }
@@ -122,6 +128,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+# Email BACKEND
+EMAIL_HOST="smtp.datayes.com"
+EMAIL_PORT=25
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
