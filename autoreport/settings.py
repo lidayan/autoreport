@@ -136,8 +136,8 @@ EMAIL_PORT=25
 # EMAIL_HOST_USER='dayan.li@datayes.com'
 # EMAIL_HOST_PASSWORD='2wsx@WSX'
 
-SERVER_EMAIL = 'han.bao@datayes.com'
-ADMINS = (('Han Bao', 'han.bao@datayes.com'),)
+SERVER_EMAIL = 'dayan.li@datayes.com'
+ADMINS = (('Li Da Yan', 'dayan.li@datayes.com'),)
 EMAIL_SUBJECT_PREFIX = '[django-autoreport]:'
 FAILED_RUNS_CRONJOB_EMAIL_PREFIX = "[django-cron, autoreport]: "
 
