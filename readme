@@ -2,3 +2,5 @@
 sudo apt-get install libmysqlclient-dev
 
 sudo pip install msyql-python
+
+sudo pip install unicodecs

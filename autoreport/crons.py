@@ -1,16 +1,15 @@
 #!/usr/bin/env python
 # coding=utf-8
 import unicodecsv as csv
-from django_cron import CronJobBase, Schedule
+from django_cron import CronJobBase
 from django.core.mail import EmailMultiAlternatives
 from django.db import connections
 
 class UserMasterReport(CronJobBase):
     RETRY_AFTER_FAILURE_MINS = 5
     ALLOW_PARALLEL_RUNS = True
-    RUN_AT_TIMES = ['17:30']
-
-    schedule = Schedule(run_at_times=RUN_AT_TIMES)
+    # RUN_AT_TIMES = ['17:30']
+    # schedule = Schedule(run_at_times=RUN_AT_TIMES)
     code = 'report.UserMasterReport'
 
     def do(self):

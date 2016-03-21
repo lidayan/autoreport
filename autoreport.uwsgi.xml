@@ -1,0 +1,12 @@
+<uwsgi>
+  <http>0.0.0.0:8001</http>
+  <vacuum>True</vacuum>
+  <master>True</master>
+  <processes>2</processes>>
+  <threads>2</threads>>
+  <chdir>/datayes/autoreport/</chdir>
+  <check-static>/static</check-static>
+  <static-map>/static=/datayes/autoreport/static</static-map>>
+  <module>autoreport.wsgi:application</module>
+  <daemonize>/datayes/autoreport/logs/uwsgi.log</daemonize>
+</uwsgi>

@@ -96,7 +96,7 @@ DATABASES = {
         'NAME'      :'usermaster',
         'USER'      :'paas',
         'PASSWORD'  :'paas@123',
-        'HOST'      :'127.0.0.1',
+        'HOST'      :'192.168.91.1',
         'PORT'      :'3312',
     } 
 }
@@ -145,6 +145,7 @@ FAILED_RUNS_CRONJOB_EMAIL_PREFIX = "[django-cron, autoreport]: "
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_URL = '/static/'
+STATIC_ROOT = './static/'
 
 
 # settings for logging
